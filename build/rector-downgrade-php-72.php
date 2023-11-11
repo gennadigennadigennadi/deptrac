@@ -13,12 +13,12 @@ return static function (RectorConfig $rectorConfig): void {
 
     $rectorConfig->skip([
         '*/tests/*',
-        # missing "optional" dependency and never used here
+        // missing "optional" dependency and never used here
         '*/symfony/framework-bundle/KernelBrowser.php',
 
         // skip for parent type override, see https://github.com/symplify/symplify/issues/4500
         DowngradeCovariantReturnTypeRector::class => [
-                                'doctrine/annotations/lib/Doctrine/Common/Annotations/DocLexer.php',
-            ],
-        ]);
+            'doctrine/annotations/lib/Doctrine/Common/Annotations/DocLexer.php',
+        ],
+    ]);
 };
