@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b63da46f0a7e97d7eec0d86509188670",
+    "content-hash": "f1114f2bf4a5b9aa6bc8a6613217fe5c",
     "packages": [
         {
             "name": "composer/pcre",
@@ -4720,21 +4720,21 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.15.25",
+            "version": "0.18.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "015935c7ed9e48a4f5895ba974f337e20a263841"
+                "reference": "02041b220704b9cbe075f0310d0954b2fda5c40c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/015935c7ed9e48a4f5895ba974f337e20a263841",
-                "reference": "015935c7ed9e48a4f5895ba974f337e20a263841",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/02041b220704b9cbe075f0310d0954b2fda5c40c",
+                "reference": "02041b220704b9cbe075f0310d0954b2fda5c40c",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.10.14"
+                "phpstan/phpstan": "^1.10.35"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -4746,11 +4746,6 @@
                 "bin/rector"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.15-dev"
-                }
-            },
             "autoload": {
                 "files": [
                     "bootstrap.php"
@@ -4769,7 +4764,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.15.25"
+                "source": "https://github.com/rectorphp/rector/tree/0.18.6"
             },
             "funding": [
                 {
@@ -4777,7 +4772,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-20T16:07:39+00:00"
+            "time": "2023-10-24T15:00:59+00:00"
         },
         {
             "name": "roave/infection-static-analysis-plugin",

@@ -66,7 +66,7 @@
         "phpstan/phpstan": "^1.6.8",
         "phpstan/phpstan-symfony": "^1.1",
         "phpunit/phpunit": "^10.2",
-        "rector/rector": "^0.15.17",
+        "rector/rector": "^0.18",
         "roave/infection-static-analysis-plugin": "^1.28",
         "vimeo/psalm": "^5.13"
     }
