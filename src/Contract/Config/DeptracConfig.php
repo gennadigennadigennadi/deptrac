@@ -31,7 +31,7 @@ final class DeptracConfig implements ConfigBuilderInterface
     public function analysers(EmitterType ...$types): self
     {
         foreach ($types as $type) {
-            $this->analyser[$type->value] = $type;
+            $this->analyser[$type->toString()] = $type;
         }
 
         return $this;
@@ -110,7 +110,7 @@ final class DeptracConfig implements ConfigBuilderInterface
         }
 
         if ([] !== $this->analyser) {
-            $config['analyser']['types'] = array_map(static fn (EmitterType $emitterType) => $emitterType->value, $this->analyser);
+            $config['analyser']['types'] = array_map(static fn (EmitterType $emitterType) => $emitterType->toString(), $this->analyser);
         }
 
         if ([] !== $this->formatters) {

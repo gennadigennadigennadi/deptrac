@@ -207,25 +207,25 @@ return static function (ContainerConfigurator $container): void {
     $services->set(InheritanceFlattener::class);
     $services
         ->set(ClassDependencyEmitter::class)
-        ->tag('dependency_emitter', ['key' => EmitterType::CLASS_TOKEN->value]);
+        ->tag('dependency_emitter', ['key' => EmitterType::CLASS_TOKEN->toString()]);
     $services
         ->set(ClassSuperglobalDependencyEmitter::class)
-        ->tag('dependency_emitter', ['key' => EmitterType::CLASS_SUPERGLOBAL_TOKEN->value]);
+        ->tag('dependency_emitter', ['key' => EmitterType::CLASS_SUPERGLOBAL_TOKEN->toString()]);
     $services
         ->set(FileDependencyEmitter::class)
-        ->tag('dependency_emitter', ['key' => EmitterType::FILE_TOKEN->value]);
+        ->tag('dependency_emitter', ['key' => EmitterType::FILE_TOKEN->toString()]);
     $services
         ->set(FunctionDependencyEmitter::class)
-        ->tag('dependency_emitter', ['key' => EmitterType::FUNCTION_TOKEN->value]);
+        ->tag('dependency_emitter', ['key' => EmitterType::FUNCTION_TOKEN->toString()]);
     $services
         ->set(FunctionCallDependencyEmitter::class)
-        ->tag('dependency_emitter', ['key' => EmitterType::FUNCTION_CALL->value]);
+        ->tag('dependency_emitter', ['key' => EmitterType::FUNCTION_CALL->toString()]);
     $services
         ->set(FunctionSuperglobalDependencyEmitter::class)
-        ->tag('dependency_emitter', ['key' => EmitterType::FUNCTION_SUPERGLOBAL_TOKEN->value]);
+        ->tag('dependency_emitter', ['key' => EmitterType::FUNCTION_SUPERGLOBAL_TOKEN->toString()]);
     $services
         ->set(UsesDependencyEmitter::class)
-        ->tag('dependency_emitter', ['key' => EmitterType::USE_TOKEN->value]);
+        ->tag('dependency_emitter', ['key' => EmitterType::USE_TOKEN->toString()]);
 
     /*
      * Layer

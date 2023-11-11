@@ -210,8 +210,8 @@ class Configuration implements ConfigurationInterface
                         ->arrayNode('types')
                             ->isRequired()
                             ->defaultValue([
-                                EmitterType::CLASS_TOKEN->value,
-                                EmitterType::FUNCTION_TOKEN->value,
+                                EmitterType::CLASS_TOKEN->toString(),
+                                EmitterType::FUNCTION_TOKEN->toString(),
                             ])
                             ->scalarPrototype()
                                 ->beforeNormalization()

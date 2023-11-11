@@ -39,12 +39,12 @@ final class DependencyResolverTest extends TestCase
         $this->flattener = $this->createMock(InheritanceFlattener::class);
 
         $this->container = new ContainerBuilder();
-        $this->container->set(EmitterType::CLASS_TOKEN->value, new ClassDependencyEmitter());
-        $this->container->set(EmitterType::CLASS_SUPERGLOBAL_TOKEN->value, new ClassSuperglobalDependencyEmitter());
-        $this->container->set(EmitterType::FILE_TOKEN->value, new FileDependencyEmitter());
-        $this->container->set(EmitterType::FUNCTION_TOKEN->value, new FunctionDependencyEmitter());
-        $this->container->set(EmitterType::FUNCTION_SUPERGLOBAL_TOKEN->value, new FunctionSuperglobalDependencyEmitter());
-        $this->container->set(EmitterType::USE_TOKEN->value, new UsesDependencyEmitter());
+        $this->container->set(EmitterType::CLASS_TOKEN->toString(), new ClassDependencyEmitter());
+        $this->container->set(EmitterType::CLASS_SUPERGLOBAL_TOKEN->toString(), new ClassSuperglobalDependencyEmitter());
+        $this->container->set(EmitterType::FILE_TOKEN->toString(), new FileDependencyEmitter());
+        $this->container->set(EmitterType::FUNCTION_TOKEN->toString(), new FunctionDependencyEmitter());
+        $this->container->set(EmitterType::FUNCTION_SUPERGLOBAL_TOKEN->toString(), new FunctionSuperglobalDependencyEmitter());
+        $this->container->set(EmitterType::USE_TOKEN->toString(), new UsesDependencyEmitter());
     }
 
     public function testResolveWithDefaultEmitters(): void
@@ -63,8 +63,8 @@ final class DependencyResolverTest extends TestCase
 
         $resolver = new DependencyResolver(
             ['types' => [
-                EmitterType::CLASS_TOKEN->value,
-                EmitterType::USE_TOKEN->value,
+                EmitterType::CLASS_TOKEN->toString(),
+                EmitterType::USE_TOKEN->toString(),
             ]],
             $this->flattener,
             $this->container,
@@ -87,7 +87,7 @@ final class DependencyResolverTest extends TestCase
         $this->flattener->expects(self::once())->method('flattenDependencies');
 
         $resolver = new DependencyResolver(
-            ['types' => [EmitterType::FUNCTION_TOKEN->value]],
+            ['types' => [EmitterType::FUNCTION_TOKEN->toString()]],
             $this->flattener,
             $this->container,
             $this->dispatcher

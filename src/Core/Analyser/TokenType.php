@@ -14,6 +14,6 @@ enum TokenType: string
 
     public static function tryFromEmitterType(EmitterType $emitterType): ?self
     {
-        return EmitterType::CLASS_TOKEN === $emitterType ? self::CLASS_LIKE : self::tryFrom($emitterType->value);
+        return EmitterType::CLASS_TOKEN === $emitterType ? self::CLASS_LIKE : self::tryFrom($emitterType->toString());
     }
 }
