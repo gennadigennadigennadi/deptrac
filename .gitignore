@@ -13,6 +13,4 @@ infection.log
 .cache/
 !.cache/.keep
 
-# downgrade with Rector
-/rector-local
-/deptrac-build
+build/deptrac-build
