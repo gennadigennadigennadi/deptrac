@@ -29,8 +29,8 @@ deptrac: ## Analyses own architecture using the default config confile
 #	github_changelog_generator -u qossmic -p deptrac --no-issues --future-release <version>
 
 .PHONY: gpg
-gpg: ## Signs release with default GPG key "4AB1782E"
-	gpg --detach-sign --armor --default-key 41DDE07547459FAECFA17813B8F640134AB1782E --output deptrac.phar.asc deptrac.phar
+gpg: ## Signs release with local key
+	gpg --detach-sign --armor --local-user ${USER} --output deptrac.phar.asc deptrac.phar
 	gpg --verify deptrac.phar.asc deptrac.phar
 
 .PHONY: infection
