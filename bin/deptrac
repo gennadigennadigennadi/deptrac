@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 use Composer\XdebugHandler\XdebugHandler;
@@ -25,3 +26,4 @@ $xdebug->check();
 unset($xdebug);
 
 (new Application())->run();
+

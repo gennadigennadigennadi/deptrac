@@ -15,13 +15,11 @@ return [
     'finders' => [
         Finder::create()->files()->in([
             'config',
-            'internal',
             'src',
             'vendor',
         ])->append([
-            'deptrac',
+            'bin/deptrac',
             'deptrac.config.php',
-            'deptrac.php',
             'composer.json',
         ])->exclude([
             'bin',
@@ -42,7 +40,7 @@ return [
         'Symfony\Polyfill',
     ],
     'expose-functions' => ['trigger_deprecation'],
-    'expose-global-constants' => true,
-    'expose-global-classes' => true,
-    'expose-global-functions' => true,
+    'expose-global-constants' => false,
+    'expose-global-classes' => false,
+    'expose-global-functions' => false,
 ];

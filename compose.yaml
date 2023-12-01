@@ -1,5 +1,5 @@
 services:
-  php:
+  deptrac:
     build:
       dockerfile: docker/php/Dockerfile
       context: ./

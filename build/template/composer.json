@@ -6,6 +6,9 @@
         "php": "^8.1",
         "ext-json": "*"
     },
+    "bin": [
+        "bin/deptrac"
+    ],
     "suggest": {
         "ext-dom": "For using the JUnit output formatter"
     },
