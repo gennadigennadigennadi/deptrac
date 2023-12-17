@@ -23,11 +23,11 @@ info "Scope deptrac"
 $PHP $SCOPER add-prefix --force --config scoper.inc.php --working-dir . --output-dir $BUILD_TMP
 
 # info "build phar"
-# $PHP $BOX compile
-#
+$PHP $BOX compile
+
 # info "sign phar"
-# gpg --detach-sign --armor --local-user ${USER} --output $BUILD_TMP/deptrac.phar.asc $BUILD_TMP/deptrac.phar
-# gpg --verify $BUILD_TMP/deptrac.phar.asc $BUILD_TMP/deptrac.phar
+gpg --detach-sign --armor --local-user ${USER} --output $BUILD_TMP/deptrac.phar.asc $BUILD_TMP/deptrac.phar
+gpg --verify $BUILD_TMP/deptrac.phar.asc $BUILD_TMP/deptrac.phar
 
 info "Dump Composer Autoloader"
 $PHP /usr/bin/composer dump-autoload --working-dir $BUILD_TMP -a --no-dev
