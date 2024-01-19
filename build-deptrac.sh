@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEPTRAC_DIR="${DEPTRAC_DIR:-../deptrac}"
+DEPTRAC_DIR="${DEPTRAC_DIR:-../deptrac-scoped}"
 BUILD_DIR=build
 BUILD_TMP=${BUILD_DIR}/deptrac-build
 PHP='docker compose exec -u 1000 deptrac php -d memory_limit=-1'
